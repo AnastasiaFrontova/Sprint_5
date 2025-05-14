@@ -39,8 +39,7 @@ def test_login_via_button_on_main_page(create_driver):
     WebDriverWait(driver, 10).until(
         EC.visibility_of_element_located(HomePageLocators.create_order_button)
     )
-
-    driver.quit()
+    assert driver.current_url == "https://stellarburgers.nomoreparties.site/"
 
 
 # 2. Вход через кнопку «Личный кабинет»
@@ -67,8 +66,9 @@ def test_login_via_personal_account_button(create_driver):
     WebDriverWait(driver, 10).until(
         EC.visibility_of_element_located(HomePageLocators.create_order_button)
     )
+    assert driver.current_url == "https://stellarburgers.nomoreparties.site/"
 
-    driver.quit()
+
 
 # 3. Тест для входа через кнопку в форме регистрации
 def test_login_via_registration_page(create_driver):
@@ -104,7 +104,8 @@ def test_login_via_registration_page(create_driver):
     WebDriverWait(driver, 10).until(
         EC.visibility_of_element_located(HomePageLocators.create_order_button)
     )
-    driver.quit()
+    assert driver.current_url == "https://stellarburgers.nomoreparties.site/"
+
 
 # 4. Вход через кнопку в форме восстановления пароля
 def test_login_via_password_recovery_form(create_driver):
@@ -130,5 +131,5 @@ def test_login_via_password_recovery_form(create_driver):
     WebDriverWait(driver, 10).until(
         EC.visibility_of_element_located(HomePageLocators.create_order_button)
     )
+    assert driver.current_url == "https://stellarburgers.nomoreparties.site/"
 
-    driver.quit()

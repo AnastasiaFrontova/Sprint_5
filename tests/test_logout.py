@@ -42,4 +42,4 @@ def test_logout(create_driver):
 
     assert driver.current_url == "https://stellarburgers.nomoreparties.site/login"
 
-    driver.quit()
+

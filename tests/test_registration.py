@@ -50,7 +50,6 @@ def test_registration_positive(create_driver):
     assert driver.current_url == "https://stellarburgers.nomoreparties.site/login", \
     "После регистрации должна открыться страница входа"
 
-    driver.quit()
 
 
 

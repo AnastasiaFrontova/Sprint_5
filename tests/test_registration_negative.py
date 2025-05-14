@@ -49,5 +49,3 @@ def test_registration_negative(create_driver):
     # 6.  Проверка ошибки для некорректного пароля
     error_message = driver.find_element(*LoginPageLocators.incorrect_password_message).text
     assert error_message == "Некорректный пароль"
-
-    driver.quit()
